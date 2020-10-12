@@ -15,6 +15,7 @@
 		D15F1B4425351293004CD6F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D15F1B4225351293004CD6F3 /* LaunchScreen.storyboard */; };
 		D15F1B4F25351293004CD6F3 /* GridViewDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D15F1B4E25351293004CD6F3 /* GridViewDemoTests.swift */; };
 		D15F1B5A25351293004CD6F3 /* GridViewDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D15F1B5925351293004CD6F3 /* GridViewDemoUITests.swift */; };
+		D15F1B6A25351C8C004CD6F3 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D15F1B6925351C8C004CD6F3 /* CollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		D15F1B5525351293004CD6F3 /* GridViewDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GridViewDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D15F1B5925351293004CD6F3 /* GridViewDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridViewDemoUITests.swift; sourceTree = "<group>"; };
 		D15F1B5B25351293004CD6F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D15F1B6925351C8C004CD6F3 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				D15F1B3B2535128D004CD6F3 /* ViewController.swift */,
 				D15F1B3D2535128D004CD6F3 /* Main.storyboard */,
 				D15F1B4025351293004CD6F3 /* Assets.xcassets */,
+				D15F1B6925351C8C004CD6F3 /* CollectionViewCell.swift */,
 				D15F1B4225351293004CD6F3 /* LaunchScreen.storyboard */,
 				D15F1B4525351293004CD6F3 /* Info.plist */,
 			);
@@ -261,6 +264,7 @@
 			files = (
 				D15F1B3C2535128D004CD6F3 /* ViewController.swift in Sources */,
 				D15F1B382535128D004CD6F3 /* AppDelegate.swift in Sources */,
+				D15F1B6A25351C8C004CD6F3 /* CollectionViewCell.swift in Sources */,
 				D15F1B3A2535128D004CD6F3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
