@@ -10,7 +10,8 @@ import UIKit
 
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
-    let items = ["Cell", "class", "is", "intended", "to", "be", "subclassed.", "Most", "methods", "defined", "by", "this", "class", "have", "minimal", "or", "no", "implementations.", "You", "are", "not", "required", "to", "override", "any", "of", "the", "methods", "but", "can", "do", "so", "in", "cases", "where", "you", "want", "to", "respond", "to", "changes", "in", "the", "view", "usage", "or", "layout"]
+    // grid data
+    let items = ["Cell", "class", "is", "intended", "to", "be", "subclassed", "Most", "methods", "defined", "by", "this", "class", "have", "minimal", "or", "no", "implementations.", "You", "are", "not", "required", "to", "override", "any", "of", "the", "methods", "but", "can", "do", "so", "in", "cases", "where", "you", "want", "to", "respond", "to", "changes", "in", "the", "view", "usage", "or", "layout"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +19,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         print("View loaded")
     }
     
+    // return count so that CollectionView can recognize number of Cell to allocate
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return items.count
     }

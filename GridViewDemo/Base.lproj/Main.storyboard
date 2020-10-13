@@ -27,14 +27,20 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="ta8-gj-WrZ" customClass="CollectionViewCell" customModule="GridViewDemo" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="58" height="128"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="58" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Wzq-pa-bbA">
-                                            <rect key="frame" x="0.0" y="0.0" width="58" height="128"/>
+                                        <collectionViewCellContentView key="contentView" autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Wzq-pa-bbA">
+                                            <rect key="frame" x="0.0" y="0.0" width="58" height="40"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j2g-g4-odz">
-                                                    <rect key="frame" x="8" y="53" width="42" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j2g-g4-odz">
+                                                    <rect key="frame" x="8" y="0.0" width="42" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="HB3-cg-GOT"/>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="QFK-AS-bDx"/>
+                                                        <constraint firstAttribute="height" constant="40" id="UoX-TK-5jk"/>
+                                                        <constraint firstAttribute="width" constant="42" id="m8j-kN-oyM"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -43,6 +49,9 @@
                                             <constraints>
                                                 <constraint firstItem="j2g-g4-odz" firstAttribute="leading" secondItem="Wzq-pa-bbA" secondAttribute="leadingMargin" id="DuG-ol-sNz"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="j2g-g4-odz" secondAttribute="trailing" id="XVB-GX-IM0"/>
+                                                <constraint firstItem="j2g-g4-odz" firstAttribute="centerY" secondItem="Wzq-pa-bbA" secondAttribute="centerY" id="cFr-L4-RWF"/>
+                                                <constraint firstAttribute="bottom" secondItem="j2g-g4-odz" secondAttribute="bottom" id="hvr-Cg-YxS"/>
+                                                <constraint firstItem="j2g-g4-odz" firstAttribute="top" secondItem="Wzq-pa-bbA" secondAttribute="top" id="w3p-FE-RKc"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <connections>
@@ -55,13 +64,6 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="H2d-gn-7KM"/>
                                 </connections>
                             </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello world" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qN7-Ca-VYT">
-                                <rect key="frame" x="20" y="72" width="86" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -71,11 +73,6 @@
                             <constraint firstItem="70E-qp-HBX" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="y6J-dT-Gjz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="qN7-Ca-VYT"/>
-                            </mask>
-                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
