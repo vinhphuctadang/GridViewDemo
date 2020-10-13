@@ -12,4 +12,5 @@ class CollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var image: UIImageView!
     var id : String? = nil
+    @IBOutlet weak var txtId: UILabel!
 }
