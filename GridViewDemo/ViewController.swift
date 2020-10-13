@@ -9,27 +9,54 @@
 import UIKit
 
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
-    
-    // grid data
-    let items = ["Cell", "class", "is", "intended", "to", "be", "subclassed", "Most", "methods", "defined", "by", "this", "class", "have", "minimal", "or", "no", "implementations.", "You", "are", "not", "required", "to", "override", "any", "of", "the", "methods", "but", "can", "do", "so", "in", "cases", "where", "you", "want", "to", "respond", "to", "changes", "in", "the", "view", "usage", "or", "layout"]
-    
+//
+    @IBOutlet weak var this: UICollectionView!
+    let columnLayout = CustomCollectionViewFlowLayout(
+        
+        // number of column per row
+       cellsPerRow: 3,
+       
+       // space between item in row
+       minimumInteritemSpacing: 0,
+       
+       // space between row
+       minimumLineSpacing: 0,
+       
+       // margin
+       sectionInset: UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+   )
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         print("View loaded")
+        
+        // setup UI
+        
+        // apply columnLayout for this
+        this?.collectionViewLayout = columnLayout
     }
     
     // return count so that CollectionView can recognize number of Cell to allocate
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return items.count
+        return 20
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         print("Do get cells")
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CollectionViewCell
         
-        cell.txtView.text = self.items[indexPath.item]
+        // load content into cell
+        cell.image.image = UIImage(named: "noImage")
+        cell.id = "\(indexPath.item)"
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let cell = collectionView.cellForItem(at: indexPath) as! CollectionViewCell
+        
+        print(cell.id)
     }
 }
 
