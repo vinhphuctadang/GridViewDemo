@@ -21,28 +21,34 @@ class ViewController:
     // custom variables
     
     // inset is used for 'margin'
-    let inset: CGFloat = 10
+    let inset: CGFloat = 3
     
     // number of cell on a row
-    let cellsPerRow = 3
+    let cellsPerRow = 2
     
     // space between lines
-    let minimumLineSpacing: CGFloat = 10
+    let minimumLineSpacing: CGFloat = 3
     
     // space between elements
-    let minimumInteritemSpacing: CGFloat = 10
+    let minimumInteritemSpacing: CGFloat = 3
+    
+    var images : [UIImage?] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         print("View loaded")
         this.contentInsetAdjustmentBehavior = .always
+        
+        for i in 0...4 {
+            images.append(UIImage(named: "img\(i)"))
+        }
     }
     
     // return count so that CollectionView can recognize number of Cell to allocate
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // we return 20 item for testing
-        return 20
+        // we return 40 item for testing
+        return 40
     }
     
     // setup displays
@@ -66,9 +72,11 @@ class ViewController:
         
         let itemWidth = ((collectionView.bounds.size.width - marginsAndInsets) / CGFloat(cellsPerRow)).rounded(.down)
         
-        let size = CGSize(width: itemWidth, height: itemWidth)
+        var size : CGSize
         
-//        print("Size: \(size)")
+        // try different view size
+        
+        size = CGSize(width: itemWidth, height: itemWidth)
         return size
     }
 
@@ -77,9 +85,11 @@ class ViewController:
 
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CollectionViewCell
         
-        cell.image.image = UIImage(named: "noImage")
+        cell.image.image = self.images[indexPath.item % self.images.count]
         cell.id = "\(indexPath.item)"
         cell.txtId.text = cell.id
+        
+        cell.backgroundColor = UIColor.black;
         
         return cell
     }
