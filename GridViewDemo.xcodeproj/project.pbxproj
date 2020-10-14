@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D1393D3C2535634000C99317 /* CustomCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1393D3B2535634000C99317 /* CustomCollectionViewFlowLayout.swift */; };
 		D15F1B382535128D004CD6F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D15F1B372535128D004CD6F3 /* AppDelegate.swift */; };
 		D15F1B3A2535128D004CD6F3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D15F1B392535128D004CD6F3 /* SceneDelegate.swift */; };
 		D15F1B3C2535128D004CD6F3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D15F1B3B2535128D004CD6F3 /* ViewController.swift */; };
@@ -37,7 +36,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D1393D3B2535634000C99317 /* CustomCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		D15F1B342535128D004CD6F3 /* GridViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GridViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D15F1B372535128D004CD6F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D15F1B392535128D004CD6F3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -111,7 +109,6 @@
 				D15F1B6925351C8C004CD6F3 /* CollectionViewCell.swift */,
 				D15F1B4225351293004CD6F3 /* LaunchScreen.storyboard */,
 				D15F1B4525351293004CD6F3 /* Info.plist */,
-				D1393D3B2535634000C99317 /* CustomCollectionViewFlowLayout.swift */,
 			);
 			path = GridViewDemo;
 			sourceTree = "<group>";
@@ -268,7 +265,6 @@
 				D15F1B3C2535128D004CD6F3 /* ViewController.swift in Sources */,
 				D15F1B382535128D004CD6F3 /* AppDelegate.swift in Sources */,
 				D15F1B6A25351C8C004CD6F3 /* CollectionViewCell.swift in Sources */,
-				D1393D3C2535634000C99317 /* CustomCollectionViewFlowLayout.swift in Sources */,
 				D15F1B3A2535128D004CD6F3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
